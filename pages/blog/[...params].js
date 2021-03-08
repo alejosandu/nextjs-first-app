@@ -6,7 +6,7 @@ const BlogPostPage = () => {
 
     console.log(router.query);
 
-    const [ first , second , last ] = router.query.params
+    const { params: [ first , second , last ] = [] }  = router.query || {}
 
     return (
         <div>Blog post: {first}/{second}/{last}</div>
